@@ -12,7 +12,7 @@ public class ExemploDeUso {
 		// Mostra na tela todos os feriados de 2020
 		System.out.format("%-30s %-10s \n", "Descrição", "Data");
 		System.out.println("--------------------------------------------");
-		for (Feriado feriado : CalculaFeriado.getTodos(2021)) {
+		for (Feriado feriado : CalculaFeriado.getFeriados(2021)) {
 			System.out.format("%-30s %-10s \n", feriado.getNomeDoFeriado(),
 			feriado.getData().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 		}

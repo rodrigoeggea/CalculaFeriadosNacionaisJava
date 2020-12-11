@@ -8,7 +8,9 @@ import java.util.List;
  * Classe utilitária que calcula e retorna todos os Feriados Nacionais no Brasil.      <br>
  * Utiliza o método "Anonymous Gregorian Algorithm" para determinar o dia de Páscoa.   <br>
  * Os demais feriados móveis são calculados a partir do dia de Páscoa como referência. <br>
- * O Carnaval não é considerado feriado nacional, para remover um feriado da lista basta comentá-lo. <br>
+ * Obs.: O Carnaval (segunda e terça-feira) são considerados como feriados nacionais pelo programa <br>
+ * mas em alguns estados brasileiros o carnaval não é considerado feriado. <br>  
+ * Para remover um feriado da lista basta comentá-lo na lista. <br>
  * 
  * @author Rodrigo Eggea
  * @version 1.1
