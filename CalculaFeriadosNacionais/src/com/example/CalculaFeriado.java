@@ -77,14 +77,14 @@ public class CalculaFeriado {
 	public static List<Feriado> getFeriados(int ano) throws Exception {
 		LocalDate pascoa          = getDiaDaPascoa(ano);
 		LocalDate sextaFeiraSanta = pascoa.minusDays(2);
-		LocalDate canaval         = pascoa.minusDays(47 + 1); // +1 de ajuste do minusDays
+		LocalDate carnaval         = pascoa.minusDays(47 + 1); // +1 de ajuste do minusDays
 		LocalDate corpusChristi   = pascoa.plusDays(60);
 		
 		// Cria uma lista com todos os Feriados Nacionais
 		List<Feriado> feriadosNacionais = new ArrayList<>();
 		feriadosNacionais.add(new Feriado("Ano Novo"               , LocalDate.of(ano, 1, 1)      )); // fixo
-		feriadosNacionais.add(new Feriado("Carnaval"               , canaval                      )); // movel
-		feriadosNacionais.add(new Feriado("Carnaval"               , canaval.plusDays(1)          )); // movel
+		feriadosNacionais.add(new Feriado("Carnaval"               , carnaval                      )); // movel
+		feriadosNacionais.add(new Feriado("Carnaval"               , carnaval.plusDays(1)          )); // movel
 		feriadosNacionais.add(new Feriado("Sexta-Feira Santa"      , sextaFeiraSanta              )); // movel
 		feriadosNacionais.add(new Feriado("Tiradentes"             , LocalDate.of(ano, 4, 21)     )); // fixo
 		feriadosNacionais.add(new Feriado("Dia do Trabalho"        , LocalDate.of(ano, 5, 1)      )); // fixo
@@ -98,7 +98,7 @@ public class CalculaFeriado {
 	}
 
 	/**
-	 * Verifica de uma determinada data é feriado.
+	 * Verifica se uma determinada data é feriado.
 	 * 
 	 * @param data - Data a ser verificada de é feriado
 	 * @return <b>true</b> se a data é um feriado nacional.
